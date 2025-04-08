@@ -20,7 +20,9 @@ def icerik_al(url):
     icerik_yaz=icerik.get_text(strip=True)
     #print(icerik_yaz)
     #################dosyala
+    str= f"{tarih_yaz}; {baslik}; {icerik_yaz}"
     f = open("icerik.txt","w")
-    print(baslik,";","\n","Tarih; ",tarih_yaz,"\n","İçerik; ",icerik_yaz,"\n", file=f)
+   # print(baslik,";","\n","Tarih; ",tarih_yaz,"\n","İçerik; ",icerik_yaz,"\n", file=f)
+    print(str, file=f)
     f.close()
 icerik_al(linkk)
